@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MagoSaid | Consultora Estratégica</title>
+    <!-- Favicon FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Cabecera / Navegación -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon">M</div>
+                <div class="logo-text">MagoSaid</div>
+            </a>
+            
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Presentación</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Quiénes Somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Sección Hero (Presentación Inicial) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Impulsamos tu visión hacia el <span>futuro</span></h1>
+                <p class="hero-subtitle">En MagoSaid Consultora brindamos soluciones estratégicas, tecnológicas y de negocio para transformar empresas y llevarlas al siguiente nivel de competitividad en el mercado global.</p>
+                <div class="hero-buttons">
+                    <a href="servicios.html" class="btn btn-primary">Nuestros Servicios</a>
+                    <a href="contacto.html" class="btn btn-secondary">Contactar un Asesor</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Usando una imagen placeholder abstracta moderna de Unsplash -->
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Consultoría Empresarial Transformación">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Por qué elegirnos (Features) -->
+    <section class="section features">
+        <div class="container">
+            <h2 class="section-title">Nuestra Propuesta de Valor</h2>
+            <p class="section-subtitle">Combinamos experiencia en la industria con pensamiento innovador para entregar resultados cuantificables.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="feature-title">Estrategia Basada en Datos</h3>
+                    <p>Tomamos decisiones fundamentadas en analítica avanzada para minimizar riesgos y maximizar el rendimiento de sus inversiones.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="feature-title">Soluciones Innovadoras</h3>
+                    <p>Aplicamos las últimas metodologías ágiles y tecnológicas para resolver problemas complejos de manera eficiente y escalable.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="feature-title">Equipo Multidisciplinario</h3>
+                    <p>Contamos con expertos en diversas áreas, garantizando una visión integral en cada proyecto que emprendemos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-icon">M</div>
+                    <div class="logo-text">MagoSaid</div>
+                </div>
+                <p class="footer-desc">Consultoría estratégica para empresas que buscan liderar en el contexto digital y global actual.</p>
+            </div>
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Presentación</a></li>
+                    <li><a href="nosotros.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+            
+          
+            
+            <div class="footer-col">
+                <h4 class="footer-title">Contáctanos</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Rivadavia 1234, Ciudad de Buenos Aires</li>
+                    <li><i class="fas fa-envelope"></i> MagoSaid123@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MagoSaid Consultora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Script simple para menú móvil -->
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiénes Somos | MagoSaid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .page-title {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+        }
+        .mission-vision {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .mission-vision {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon">M</div>
+                <div class="logo-text">MagoSaid</div>
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Presentación</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html" class="active">Quiénes Somos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Nosotros</h1>
+        </div>
+    </section>
+
+    <!-- Historia y Descripción -->
+    <section class="section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Nuestro Equipo">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title" style="text-align: left; font-size: 2rem;">Experiencia global, impacto local</h2>
+                    <p style="margin-bottom: 20px;">Fundada en 2010, MagoSaid ha crecido hasta convertirse en una de las firmas de consultoría más confiables de la región. Creemos en la construcción de relaciones a largo plazo con nuestros clientes, basadas en la confianza, la transparencia y los resultados medibles.</p>
+                    <p>Nuestro equipo está compuesto por ex-directivos, científicos de datos, y estrategas de negocio que aportan una perspectiva única a cada reto empresarial. No solo entregamos reportes; nos arremangamos e implementamos soluciones junto a usted.</p>
+                    
+                    <div class="mission-vision">
+                        <div class="feature-card" style="padding: 25px;">
+                            <h3 style="color: var(--secondary); margin-bottom: 10px;">Nuestra Misión</h3>
+                            <p style="font-size: 0.95rem;">Empoderar a las organizaciones para alcanzar su máximo potencial mediante estrategias innovadoras y ejecución de excelencia.</p>
+                        </div>
+                        <div class="feature-card" style="padding: 25px;">
+                            <h3 style="color: var(--secondary); margin-bottom: 10px;">Nuestra Visión</h3>
+                            <p style="font-size: 0.95rem;">Ser la firma líder en consultoría iberoamericana, reconocida por transformar ideas audaces en realidades empresariales de éxito internacional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-icon">M</div>
+                    <div class="logo-text">MagoSaid</div>
+                </div>
+                <p class="footer-desc">Consultoría estratégica para empresas que buscan liderar en el contexto digital y global actual.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Presentación</a></li>
+                    <li><a href="nosotros.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+           
+            <div class="footer-col">
+                <h4 class="footer-title">Contáctanos</h4>
+                <ul class="footer-links">
+                    <li><i class="fas fa-map-marker-alt"></i> Av. Rivadavia 1234, Ciudad de Buenos Aires</li>
+                    <li><i class="fas fa-envelope"></i> MagoSaid123@gmail.com</li>
+                    <li><i class="fas fa-phone"></i> +1 234 567 8900</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MagoSaid Consultora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

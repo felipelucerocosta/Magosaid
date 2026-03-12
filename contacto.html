@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | MagoSaid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+        }
+        .page-title {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Form Styles */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+        .contact-info-panel {
+            background-color: var(--primary);
+            color: white;
+            padding: 50px;
+        }
+        .contact-info-panel h3 {
+            color: white;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .contact-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .contact-info-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-top: 3px;
+        }
+        .contact-form-panel {
+            padding: 50px;
+        }
+        .contact-form-panel h3 {
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #E2E8F0;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition-fast);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.1);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            .contact-info-panel, .contact-form-panel {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <div class="logo-icon">M</div>
+                <div class="logo-text">MagoSaid</div>
+            </a>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Presentación</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="nosotros.html">Quiénes Somos</a></li>
+                <li><a href="contacto.html" class="active">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Hablemos</h1>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem;">Déjenos un mensaje y un consultor se pondrá en contacto a la brevedad.</p>
+        </div>
+    </section>
+
+    <!-- Contenido Contacto -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Info Panel -->
+                <div class="contact-info-panel">
+                    <h3>Información de Contacto</h3>
+                    <p style="color: #A0AABF; margin-bottom: 40px;">Estamos dispuestos a escuchar sus desafíos y proponer soluciones. Visítenos en nuestras oficinas o contáctenos por los siguientes medios.</p>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 5px;">Dirección</h4>
+                            <p style="color: #A0AABF;">Av. Rivadavia 1234, Piso 12,<br>Ciudad de Buenos Aires.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 5px;">Teléfono</h4>
+                            <p style="color: #A0AABF;">+1 (234) 567 8900<br>+1 (234) 567 8901</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 style="color: white; margin-bottom: 5px;">Correo Electrónico</h4>
+                            <p style="color: #A0AABF;">MagoSaid123@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form Panel -->
+                <div class="contact-form-panel">
+                    <h3>Envíenos un mensaje</h3>
+                    <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Formulario enviado (Simulación). Nos pondremos en contacto pronto.');">
+                        <div class="form-group">
+                            <label class="form-label" for="nombre">Nombre Completo</label>
+                            <input type="text" id="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="email">Correo Corporativo</label>
+                            <input type="email" id="email" class="form-control" placeholder="juan@empresa.com" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="asunto">Asunto / Servicio de Interés</label>
+                            <select id="asunto" class="form-control">
+                                <option value="">Seleccione un motivo...</option>
+                                <option value="estrategia">Consultoría Estratégica</option>
+                                <option value="digital">Transformación Digital</option>
+                                <option value="otros">Otros / Consulta General</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" class="form-control" placeholder="Describa brevemente en qué podemos ayudarle..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <div class="logo-icon">M</div>
+                    <div class="logo-text">MagoSaid</div>
+                </div>
+                <p class="footer-desc">Consultoría estratégica para empresas que buscan liderar en el contexto digital y global actual.</p>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-title">Enlaces</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Presentación</a></li>
+                    <li><a href="nosotros.html">Quiénes Somos</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                </ul>
+            </div>
+           
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MagoSaid Consultora. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
